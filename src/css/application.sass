@@ -1,4 +1,71 @@
 @import 'vendor/normalize'
+@import 'vendor/mixin'
 
-h1
-  color: red
+
+body
+  padding: 0
+  margin: 0
+  .title
+    @extend .font-style
+    text-align: center
+    font-size: 3em
+    padding: 1em 0
+  .sec_title
+
+    p
+      margin: 0
+      padding: 0.5em 0
+      width: 100%
+      text-align: center
+      +bg-1
+      a
+        +width(100%,0 0)
+        padding: 0.3em 0
+        display: block
+        color: $white
+        text-decoration: none
+
+#main
+  padding: 0
+  +width(1000px,auto)
+  +flex
+  
+  .box
+    width: calc(100% / 3)
+    +padding(1em 4px,3,8px,8px)
+    box-sizing: border-box
+    img
+      width: 100%
+      display: block
+
+    h1
+      padding: 0
+      margin: 0.5em 20px
+      @extend .font-style
+      &:first-letter
+        color: $pink
+    p
+      background: #fff
+      padding: 0.5em 20px
+      box-sizing: border-box
+      margin: 0
+      word-wrap: break-word
+    a
+      +width(150px,1em auto)
+      
+      display: block
+      color: $white
+      text-decoration: none
+      border: 5px rgba(0,0,0,0.05) solid
+      border-radius: 3px
+      box-sizing: border-box
+      span
+        +bg-1
+        +text-a(center)
+        @extend .trans
+        display: block
+        box-sizing: border-box
+        padding: 0.8em 1em
+        border: 1px rgba(255,255,255,0.1) solid
+        &:hover
+          background-color: $pink
