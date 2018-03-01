@@ -104,18 +104,21 @@ body
   justify-content: center
   align-items: center
   .test_ani
-    height: 15px
-    width: 15px
+    height: 13px
+    width: 13px
     margin: 1em 0.3em
     background: $pink
     +animation(ifinityCircles 2s infinite ease)
+    +ani-delay(3,.2)
 
 
 +keyframes(ifinityCircles)
-  from
-    transform: rotate(0)
-  to
-    transform: rotate(360deg)
+  0%
+    transform: rotate(0) scale(0.8)
+  50%
+    transform: rotate(180deg) scale(1)
+  100%
+    transform: rotate(360deg) scale(0.8)
 
 +keyframes(opacity)
   from
