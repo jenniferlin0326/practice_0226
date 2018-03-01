@@ -36,6 +36,15 @@ $pink: #f7647d
 .font-style
   font-family: 'Pacifico', cursive
 
+@mixin ani-delay($i,$s)
+  &:first-child
+    animation-delay: 0s
+  &:nth-child(2)
+    animation-delay: calc(#{$s} / #{$i} * 1s)
+  &:nth-child(3)
+    animation-delay: calc( #{$s} / #{$i} * 2s)
+  &:nth-child(4)
+    animation-delay: calc( #{$s} / #{$i} * 3s)
 
 //@mixin for keyframe
 =keyframes($name)
