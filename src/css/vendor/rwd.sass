@@ -1,0 +1,24 @@
+@media only screen and (max-width: 1000px)
+  #main
+    +width(100%,auto)
+@media only screen and (max-width: 768px)
+  body
+    .title
+      .login
+        position: relative
+  #main
+    padding: 2px
+    .box
+      width: calc(100% / 2)
+      padding: 4px
+      &:nth-child(3n+1)
+        padding-left: 4px
+        padding-right: 4px
+      &:nth-child(3n)
+        padding-left: 4px
+        padding-right: 4px
+      justify-content: space-around
+@media only screen and (max-width: 450px)
+  #main
+    .box
+      width: 100%

@@ -7,6 +7,7 @@ body
   margin: 0
   .title
     @extend .font-style
+    +animation(opacity 2s ease)
     font-size: 3em
     padding: 1em 0
     position: relative
@@ -47,12 +48,18 @@ body
 
 #main
   padding: 0
+  box-sizing: border-box
   +width(1000px,auto)
   +flex
-  
+
   .box
     width: calc(100% / 3)
     +padding(1em 4px,3,8px,8px)
+    +animation(fadeInUp 2s ease)
+    animation-duration: 1s
+    animation-fill-mode: both
+    -webkit-animation-duration: 1s
+    -webkit-animation-fill-mode: both
     box-sizing: border-box
     img
       width: 100%
@@ -73,7 +80,7 @@ body
       word-wrap: break-word
     a
       +width(150px,1em auto)
-      
+
       display: block
       color: $white
       text-decoration: none
@@ -108,3 +115,19 @@ body
     transform: rotate(0)
   to
     transform: rotate(360deg)
+
++keyframes(opacity)
+  from
+    opacity: 0
+  to
+    opacity: 1
+
++keyframes(fadeInUp)
+  from
+    transform: translate3d(0,100%,0)
+    opacity: 0
+  to
+    transform: translate3d(0,0,0)
+    opacity: 1
+
+@import 'vendor/rwd'
