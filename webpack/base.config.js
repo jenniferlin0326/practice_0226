@@ -46,6 +46,10 @@ module.exports = new WebpackConfig.Config().merge({
         use: getCssLoader()
       },
       {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
+      {
         test: /img\/.*\.(png|jpg|jpeg|gif|svg)(\?[a-z0-9-]+)?$/,
         loader: 'file-loader?name=[path][name]-[hash:7].[ext]'
       },
@@ -61,8 +65,7 @@ module.exports = new WebpackConfig.Config().merge({
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/html/index.html'
+      template: './src/html/index.pug'
     }),
   ]
 })
-
