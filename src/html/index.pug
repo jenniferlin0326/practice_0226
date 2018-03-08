@@ -5,7 +5,36 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title --
   body
-    #app
-    .test
-      p 213
-    .test2
+    .wrapper
+      h1.title COLOR
+        .mainbox
+          - for(var x=0; x<10; x++)
+            .color-item
+        .mainbox
+           - for(var x=0; x<3; x++)
+            .color-item-l
+      h1.title PANEL
+        .mainbox.flex
+          .panel.panel-warning
+            .panel-title Title
+            .panel-text Text opiuf wjfihj wpvhiihvl iwepfi wnl.
+            .panel-text2 MORE
+          .panel.panel-danger
+            .panel-title Title
+            .panel-text Text opiuf wjfihj wpvhiihvl iwepfi wnl.
+            .panel-text2 MORE
+          .panel.panel-main
+            .panel-title Title
+            .panel-text Text opiuf wjfihj wpvhiihvl iwepfi wnl.
+            .panel-text2 MORE
+          .panel.panel-success
+            .panel-title Title
+            .panel-text Text opiuf wjfihj wpvhiihvl iwepfi wnl.
+            .panel-text2 MORE
+          .panel.panel-defult
+            .panel-title Title
+            .panel-text Text opiuf wjfihj wpvhiihvl iwepfi wnl.
+            .panel-text2 MORE
+          
+        
+

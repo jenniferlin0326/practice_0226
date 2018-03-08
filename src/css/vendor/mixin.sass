@@ -1,10 +1,5 @@
-$white: #fff
-$black: #000
-$pink: #f7647d
-@mixin bg-1
-  background: $black
-@mixin bg-2
-  background: $white
+@mixin bg($color)
+  background: $color
 @mixin text-a($a: center)
   text-align: $a
 
@@ -29,13 +24,6 @@ $pink: #f7647d
   &:nth-child(#{$i}n)
     padding-left: 0
     padding-right: $p-r
-
-/*效果
-.trans
-  transition: .5s ease
-.font-style
-  font-family: 'Pacifico', cursive
-
 @mixin ani-delay($i,$s)
   &:first-child
     animation-delay: 0s
@@ -45,6 +33,9 @@ $pink: #f7647d
     animation-delay: calc( #{$s} / #{$i} * 2s)
   &:nth-child(4)
     animation-delay: calc( #{$s} / #{$i} * 3s)
+/*效果
+@mixin trans($s: .5s,$type: ease)
+  transition: $s $type
 
 //@mixin for keyframe
 =keyframes($name)
@@ -56,9 +47,6 @@ $pink: #f7647d
     @content
   @keyframes #{$name}
     @content
-
-
-
 
 //@mixin for animation
 =animation($content)

@@ -1,137 +1,81 @@
 @import 'vendor/normalize'
 @import 'vendor/mixin'
-
-
-body
-  padding: 0
-  margin: 0
-  .title
-    @extend .font-style
-    +animation(opacity 2s ease)
-    font-size: 3em
-    padding: 1em 0
-    position: relative
-    text-align: center
-    .login
-      position: absolute
-      top: 0
-      right: 0
-      padding: 5px
-      display: flex
-      justify-content: center
-      align-items: center
-      a
-        display: inline-block
-        font-size: 1rem
-        color: $black
-        padding: 0.3em 1em
-        text-decoration: none
-        @extend .trans
-        &:first-child
-          border-right: $black 1px solid
-        &:hover
-          color: $pink
-  .sec_title
-
-    p
-      margin: 0
-      padding: 0.5em 0
-      width: 100%
-      text-align: center
-      +bg-1
-      a
-        +width(100%,0 0)
-        padding: 0.3em 0
-        display: block
-        color: $white
-        text-decoration: none
-
-#main
-  padding: 0
-  box-sizing: border-box
-  +width(1000px,auto)
-  +flex
-
-  .box
-    width: calc(100% / 3)
-    +padding(1em 4px,3,8px,8px)
-    +animation(fadeInUp 2s ease)
-    +ani-delay(3,.3)
-    animation-duration: 1s
-    animation-fill-mode: both
-    -webkit-animation-duration: 1s
-    -webkit-animation-fill-mode: both
-    box-sizing: border-box
-    img
-      width: 100%
-      display: block
-
-    h1
-      padding: 0
-      font-size: 1.7em
-      margin: 0.5em 20px
-      @extend .font-style
-      &:first-letter
-        color: $pink
-    p
-      background: #fff
-      padding: 0.5em 20px
-      box-sizing: border-box
-      margin: 0
-      word-wrap: break-word
-    a
-      +width(150px,1em auto)
-
-      display: block
-      color: $white
-      text-decoration: none
-      border: 5px rgba(0,0,0,0.05) solid
-      border-radius: 3px
-      box-sizing: border-box
-      span
-        +bg-1
-        +text-a(center)
-        @extend .trans
-        display: block
-        box-sizing: border-box
-        padding: 0.8em 1em
-        border: 1px rgba(255,255,255,0.1) solid
-        &:hover
-          background-color: $pink
-.test
-  width: 100%
+@import 'vendor/base'
+.flex
   display: flex
-  justify-content: center
-  align-items: center
-  .test_ani
-    height: 13px
-    width: 13px
-    margin: 1em 0.3em
-    background: $pink
-    +animation(ifinityCircles 2s infinite ease)
-    +ani-delay(3,.2)
+  flex-wrap: wrap
+/*color
+.color-item
+  width: 2rem
+  height: 2rem
+  margin-right: 0.2em
+  display: inline-block
+  &:first-child
+    +bg($black)
+  &:nth-child(2)
+    +bg($dark)
+  &:nth-child(3)
+    +bg($success)
+  &:nth-child(4)
+    +bg($light)
+  &:nth-child(5)
+    +bg($warning)
+  &:nth-child(6)
+    +bg($danger)
+  &:nth-child(7)
+    +bg($light-2)
+  &:nth-child(8)
+    +bg($cancel)
+  &:nth-child(9)
+    +bg($border)
+  &:nth-child(10)
+    +bg($gray-bg)
+.color-item-l
+  width: 4.5rem
+  height: 2rem
+  margin-right: 0.2em
+  display: inline-block
+  &:first-child
+    +bg($black)
+  &:nth-child(2)
+    +bg($main)
+  &:nth-child(3)
+    +bg($danger)
 
-
-+keyframes(ifinityCircles)
-  0%
-    transform: rotate(0) scale(0.8)
-  50%
-    transform: rotate(180deg) scale(1)
-  100%
-    transform: rotate(360deg) scale(0.8)
-
-+keyframes(opacity)
-  from
-    opacity: 0
-  to
-    opacity: 1
-
-+keyframes(fadeInUp)
-  from
-    transform: translate3d(0,100%,0)
-    opacity: 0
-  to
-    transform: translate3d(0,0,0)
-    opacity: 1
-
+/*panel
+.panel
+  border-radius: 3px
+  border: 1px $border solid
+  margin-bottom: 0.5rem
+  /*width*/
+  width: calc(100% / 3 - 0.4em)
+  margin-right: 0.2em
+  &:nth-child(3)
+    margin-right: 0
+.panel-title
+  font-size: $font-size-l
+  padding: 1rem 2rem 0
+.panel-text
+  padding: 1rem 2rem
+  font-size: $font-size-m
+.panel-text2
+  border-top: rgba(255,255,255,0.3) 1px solid
+  padding: 1rem 2rem
+  font-size: $font-size-s
+/*background
+.panel-warning
+  background-color: $warning
+  color: $white
+.panel-danger
+  background-color: $danger
+  color: $white
+.panel-main
+  background-color: $main
+  color: $white
+.panel-success
+  background-color: $success
+  color: $white
+.panel-defult
+  .panel-text2
+    border-top: $border 1px solid
 @import 'vendor/rwd'
