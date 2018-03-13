@@ -4,6 +4,7 @@
   box-sizing: border-box
     
 .header
+    min-width: 768px
 // header上方深色區塊
 .header-topBar
     @extend .flex
@@ -28,11 +29,11 @@
 .lanList
     position: absolute  
     display: none
-// header上方深色區塊
+// header主要選單區塊
 .header-main
     @extend .flex
     background-color: $main
-    padding: 0 3%
+    padding: 10px 3%
     align-items: center
     position: relative
     &:before
@@ -44,7 +45,16 @@
         left: 0
         background-color: rgba($dark, 0.3)
 .header-logo
+    +trans
     width: 200px
+    height: 50px
+    display: inline-block
+    cursor: pointer
+    background-image: url(../img/esball_ver12.png)
+    background-repeat: no-repeat
+    background-position-y: -7px
+    &:hover
+        opacity: 0.3
 .header-version
     +trans
     width: 100px
@@ -80,3 +90,33 @@
             background-color: $light
 .header-menu
     width: calc(100% - 300px)
+.menu-list
+    text-align: right
+.menu-item
+    display: inline-block
+    padding: 10px
+.menu-btn
+    +trans
+    display: inline-block
+    width: 35px
+    height: 35px
+    cursor: pointer
+    &:hover
+        opacity: 0.3
+.menu-message
+    background-image: url(../img/icon-02.png)
+    background-position-x: -5px
+    background-position-y: 0px
+    background-size: 140px
+.menu-function
+    background-image: url(../img/icon-02.png)
+    background-position-x: 86px
+    background-position-y: 0px
+    background-size: 140px
+.menu-game
+    background-image: url(../img/icon-02.png)
+    background-position-x: 37px
+    background-position-y: 0px
+    background-size: 140px
+.sec-menu-lst
+    display: none
