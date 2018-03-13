@@ -1,0 +1,82 @@
+.flex
+  display: flex
+  flex-wrap: wrap
+  box-sizing: border-box
+    
+.header
+// header上方深色區塊
+.header-topBar
+    @extend .flex
+    background-color: $dark
+    padding: 0 3%
+.topBar-text
+    color: #fff
+    font-size: $font-size-s
+    display: inline-block
+.topBar-time
+    width: 30%
+    padding-top: 2px
+.topBar-menu
+    width: 70%
+    text-align: right
+.topBar-position
+    display: inline-block
+    padding-left: 20px
+.lanBox
+    position: relative
+    color: $border
+.lanList
+    position: absolute  
+    display: none
+// header上方深色區塊
+.header-main
+    @extend .flex
+    background-color: $main
+    padding: 0 3%
+    align-items: center
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 4px
+        bottom: -4px
+        left: 0
+        background-color: rgba($dark, 0.3)
+.header-logo
+    width: 200px
+.header-version
+    +trans
+    width: 100px
+    color: $warning
+    position: relative
+    padding: 7px 12px
+    font-size: $font-size-s
+    box-sizing: border-box
+    cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: -1px
+        border: rgba($dark, 0.4) 3px solid
+        border-radius: 30px
+        box-sizing: border-box
+    &:after
+        +trans
+        content: ''
+        position: absolute
+        width: 19px
+        height: 19px
+        background-color: $warning
+        border-radius: 50%
+        right: 8px
+        top: 6px
+    &:hover
+        color: $light
+        &:after
+            background-color: $light
+.header-menu
+    width: calc(100% - 300px)
