@@ -67,36 +67,204 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
           .tab.tab-defult <span class="tab-status tab-disable"></span>Defult <div class="close-bar"></div>
           .tab.tab-defult <span class="tab-status tab-danger"></span>Defult <div class="close-bar"></div>
         .containBox
-          .gameInfo-current
-            .gameInfo-logo
-            .gameInfoBox
-              .gameInfo-name 重慶時時彩
-              .gameInfo-num No.20180309-068
-              .gameInfo-time 00:05:00
-          .gameInfo-result
-            .gameInfo-num No.20180309-067
-            .gameInfo-resultBox
-              span.resultNum.resultNum--L 4
-              span.resultNum.resultNum--L 1
-              span.resultNum.resultNum--L 4
-              span.resultNum.resultNum--L 8
-              span.resultNum.resultNum--L 7
-          .gameInfo-history
-            mixin game-history(num1,num2,num3,num4,num5)
-              .gameInfo-num.hint-bottom
+          .gameInfo
+            .gameInfo-current
+              .gameInfo-logo
+              .gameInfoBox
+                .gameInfo-name 重慶時時彩
+                .gameInfo-num No.20180309-068
+                .gameInfo-time 00:05:00
+            .gameInfo-result
+              .gameInfo-num No.20180309-067
               .gameInfo-resultBox
-                span.resultNum= num1
-                span.resultNum= num2
-                span.resultNum= num3
-                span.resultNum= num4
-                span.resultNum= num5
-            +game-history('4','1','3','5','2')
-            +game-history('7','4','0','6','3')
-            +game-history('9','4','3','4','5')
-            +game-history('8','1','3','6','4')
-            +game-history('1','5','6','8','9')
-
-
-
-
-
+                span.resultNum.resultNum--L 4
+                span.resultNum.resultNum--L 1
+                span.resultNum.resultNum--L 4
+                span.resultNum.resultNum--L 8
+                span.resultNum.resultNum--L 7
+            .gameInfo-history
+              mixin game-history(num1,num2,num3,num4,num5)
+                .gameInfo-num.hint-bottom
+                .gameInfo-resultBox
+                  span.resultNum= num1
+                  span.resultNum= num2
+                  span.resultNum= num3
+                  span.resultNum= num4
+                  span.resultNum= num5
+              +game-history('4','1','3','5','2')
+              +game-history('7','4','0','6','3')
+              +game-history('9','4','3','4','5')
+              +game-history('8','1','3','6','4')
+              +game-history('1','5','6','8','9')
+          .game-menu
+            //*第一層*//
+            ul.game-menuList
+              li.game-menuItem
+                a.game-menuBtn.game-menuBtn-is-active 雙面
+                //*第二層*//
+                ul.sec-game-menuList
+                  li.sec-game-menuItem
+                    a.sec-game-menuBtn.sec-game-menuBtn-is-active 一字
+                  li.sec-game-menuItem
+                    a.sec-game-menuBtn 二字
+                  li.sec-game-menuItem
+                    a.sec-game-menuBtn 三字
+                  li.sec-game-menuItem
+                    a.sec-game-menuBtn 五字＆龍虎
+                  li.sec-game-menuItem
+                    a.sec-game-menuBtn.menuArrow test
+                    //*第三層*//
+                    ul.trd-game-menuList
+                      li.trd-game-menuItem
+                        a.trd-game-menuBtn.menuArrow test1
+                        //*第四層*//
+                        ul.fourth-game-menuList
+                          li.fourth-game-menuItem
+                            a.fourth-game-menuBtn test1-1
+                          li.fourth-game-menuItem
+                            a.fourth-game-menuBtn test1-2
+                          li.fourth-game-menuItem
+                            a.fourth-game-menuBtn test1-3
+                          li.fourth-game-menuItem
+                            a.fourth-game-menuBtn test1-4
+                          li.fourth-game-menuItem
+                            a.fourth-game-menuBtn test1-5
+                        //*第四層 end*//
+                      li.trd-game-menuItem
+                        a.trd-game-menuBtn test2
+                      li.trd-game-menuItem
+                        a.trd-game-menuBtn test3
+                      li.trd-game-menuItem
+                        a.trd-game-menuBtn test4
+                      li.trd-game-menuItem
+                        a.trd-game-menuBtn test5
+                    //*第三層 end*//
+              li.game-menuItem
+                a.game-menuBtn 和數
+              li.game-menuItem
+                a.game-menuBtn 和尾數
+              li.game-menuItem
+                a.game-menuBtn 一字
+              li.game-menuItem
+                a.game-menuBtn 二字
+              li.game-menuItem
+                a.game-menuBtn 三字
+          //*主盤面*//
+          .gameArea
+            .gameArea-box
+              .gameArea-boxCol
+                .gameArea-title 萬
+                .gameArea-items
+                  button.btn-item 大
+                    span.gameArea-item-rate 1.92 
+                  button.btn-item.is-active 小
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 單
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 雙
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 質
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 合
+                    span.gameArea-item-rate 1.92
+              .gameArea-boxCol
+                .gameArea-title 仟
+                .gameArea-items
+                  button.btn-item 大
+                    span.gameArea-item-rate 1.92 
+                  button.btn-item 小
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 單
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 雙
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 質
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 合
+                    span.gameArea-item-rate 1.92
+              .gameArea-boxCol
+                .gameArea-title 佰
+                .gameArea-items
+                  button.btn-item 大
+                    span.gameArea-item-rate 1.92 
+                  button.btn-item 小
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 單
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 雙
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 質
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 合
+                    span.gameArea-item-rate 1.92
+              .gameArea-boxCol
+                .gameArea-title 拾
+                .gameArea-items
+                  button.btn-item 大
+                    span.gameArea-item-rate 1.92 
+                  button.btn-item 小
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 單
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 雙
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 質
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 合
+                    span.gameArea-item-rate 1.92
+              .gameArea-boxCol
+                .gameArea-title 個
+                .gameArea-items
+                  button.btn-item 大
+                    span.gameArea-item-rate 1.92 
+                  button.btn-item 小
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 單
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 雙
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 質
+                    span.gameArea-item-rate 1.92
+                  button.btn-item 合
+                    span.gameArea-item-rate 1.92
+          .order
+            .orderTotal
+              span.orderTotal-title 每注：
+              input.orderTotal-inp.inp-defult
+              span.orderTotal-title 投注數：
+              b.orderTotal-amounts 0
+              buttom.btn.btn-warning.addCart <span class="addCart-icon"></span>添加至注單
+          .orderList-openBtn 注單
+          .orderList
+            .orderList-head
+              .orderList-title.contain 內容
+              .orderList-title.bets 注數
+              .orderList-title.amount 每注金額
+            .orderList-itemBox
+              .orderItem
+                .close-bar
+                .orderItem-col
+                  .orderItem-text.contain 萬 大 @ 
+                    span.orderItem-rate 1.92
+                  .orderItem-text.bets 1
+                  .orderItem-text.amount 5 
+                .orderItem-col
+                  .orderItem-text.contain 萬 大 @ 
+                    span.orderItem-rate 1.92
+                  .orderItem-text.bets 1
+                  .orderItem-text.amount 5
+              .orderItem
+                .close-bar
+                .orderItem-col
+                  .orderItem-text.contain 萬 大 @ 
+                    span.orderItem-rate 1.92
+                  .orderItem-text.bets 1
+                  .orderItem-text.amount 5 
+                .orderItem-col
+                  .orderItem-text.contain 萬 大 @ 
+                    span.orderItem-rate 1.92
+                  .orderItem-text.bets 1
+                  .orderItem-text.amount 5
+            .orderList-btnBox
+              buttom.orderList-btn.btn-defult.btn-spuare 機選
+              buttom.orderList-btn.btn-success.btn-spuare 我要追號
