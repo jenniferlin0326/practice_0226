@@ -62,6 +62,40 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
             a.sideBar-btn BB 雷電PK <span class="sideBar-time">00:02:20</span>
         
       .container
+        .tabBox
+          .tab.tab-active <span class="tab-status tab-success"></span>Active <div class="close-bar"></div>
+          .tab.tab-defult <span class="tab-status tab-disable"></span>Defult <div class="close-bar"></div>
+          .tab.tab-defult <span class="tab-status tab-danger"></span>Defult <div class="close-bar"></div>
+        .containBox
+          .gameInfo-current
+            .gameInfo-logo
+            .gameInfoBox
+              .gameInfo-name 重慶時時彩
+              .gameInfo-num No.20180309-068
+              .gameInfo-time 00:05:00
+          .gameInfo-result
+            .gameInfo-num No.20180309-067
+            .gameInfo-resultBox
+              span.resultNum.resultNum--L 4
+              span.resultNum.resultNum--L 1
+              span.resultNum.resultNum--L 4
+              span.resultNum.resultNum--L 8
+              span.resultNum.resultNum--L 7
+          .gameInfo-history
+            mixin game-history(num1,num2,num3,num4,num5)
+              .gameInfo-num.hint-bottom
+              .gameInfo-resultBox
+                span.resultNum= num1
+                span.resultNum= num2
+                span.resultNum= num3
+                span.resultNum= num4
+                span.resultNum= num5
+            +game-history('4','1','3','5','2')
+            +game-history('7','4','0','6','3')
+            +game-history('9','4','3','4','5')
+            +game-history('8','1','3','6','4')
+            +game-history('1','5','6','8','9')
+
 
 
 

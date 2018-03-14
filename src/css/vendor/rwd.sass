@@ -1,23 +1,64 @@
-@media only screen and (max-width: 1000px)
-  #main
-    +width(100%,auto)
+@media only screen and (max-width: 1200px)
+  .gameInfo-logo
+    display: none
+  .gameInfo-current
+    width: 30%
+    padding-left: 3%
+    padding-right: 0
+  .gameInfoBox
+    width: 100%
+    padding: 0 
+  .gameInfo-result
+    width: 43%
+    padding: 20px 3%
+  .gameInfo-history
+    width: 27%
+@media only screen and (max-width: 960px)
+  .grid-mainContain
+    grid-template-columns: 3% auto 3%
+  .sidebar
+    +trans(.6s,ease)
+    grid-column: 1/2
+    position: absolute
+    left: -300px
+    width: 300px
+    top: 106px
+    &:before
+      content: ''
+      width: 20px
+      height: 60px
+      position: absolute
+      right: -20px
+      top: 100px
+      background-color: $main
+      display: block
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+      cursor: pointer
+    &:hover     
+      left: 0
+      background-color: $white
+      z-index: 10
+  .sideBar-title
+    padding-left: calc(5% + 22px)
+    &:before
+      left: 5%
+  .sideBar-detail
+    padding-left: calc(5% + 22px)
+  .container
+    grid-column: 2/3
+    padding-left: 0
+  .gameInfo-current
+    width: 40%
+  .gameInfo-result
+    width: 60%
+  .gameInfo-history
+    width: 100%
 @media only screen and (max-width: 768px)
-  body
-    .title
-      .login
-        position: relative
-  #main
-    padding: 2px
-    .box
-      width: calc(100% / 2)
-      padding: 4px
-      &:nth-child(3n+1)
-        padding-left: 4px
-        padding-right: 4px
-      &:nth-child(3n)
-        padding-left: 4px
-        padding-right: 4px
-      justify-content: space-around
+  .gameInfo-history
+    width: 100%
+     
+      
 @media only screen and (max-width: 450px)
   #main
     .box
