@@ -4,7 +4,7 @@
   box-sizing: border-box
     
 .header
-    min-width: 768gpx
+    min-width: 768px
 // header上方深色區塊
 .header-topBar
     @extend .flex
@@ -189,8 +189,8 @@
 .container
     padding-top: 28px
     padding-left: 5%
-    max-width: 1200px
-    margin: 0 auto
+    width: 1200px
+    margin: 0 auto 50px
 //頁籤
 .tabBox
     display: flex
@@ -474,6 +474,7 @@
     font-size: $font-size-s
     position: relative
     box-sizing: border-box
+    background-color: rgba($warning, 0)
     cursor: pointer
     &:hover
         background-color: rgba($warning, 0.1)
@@ -545,9 +546,7 @@
         opacity: 0.5
 .orderList
     @extend .flex
-   
     position: relative
-    margin: 50px 0 0
     box-shadow: 0px 0px 6px rgba($black,0.3)
     &:before
         
@@ -592,6 +591,7 @@
     font-size: $font-size-s
 .orderItem-rate
     color: $danger
+//機選＋我要追號
 .orderList-btnBox
     width: 250px
     padding: 15px 5px
@@ -600,3 +600,113 @@
 .orderList-btn
     display: inline-flex
     margin-left: 5px
+//我要追號的資訊
+.followBox
+    padding: 15px 5px 15px 5%
+    width: 100%
+    box-sizing: border-box
+.tab-sBox
+    @extend .flex
+    border-top: $border 1px solid
+.tab-s
+    +trans
+    min-width: 90px
+    padding: 7px 10px
+    text-align: center
+    color: $main
+    border-bottom-left-radius: 4px
+    border-bottom-right-radius: 4px
+    cursor: pointer
+    &:hover
+       background-color: $main 
+       color: $white
+.tab-s.is-active
+    background-color: $main
+    color: $white
+.tab-s-container
+    input
+        color: $success
+        display: inline-block
+        vertical-align: middle
+    select
+        color: $success
+        display: inline-block
+        vertical-align: middle
+        margin: 0 5px
+    .btn.btn-s.btn-success
+        display: inline-block
+        vertical-align: middle
+//固定在下方的主下注按鈕
+.orderBet
+    @extend .flex
+    position: fixed
+    bottom: 0
+    width: 1200px
+    min-width: 768px
+    box-sizing: border-box
+    background-color: #19253E
+    z-index: 10
+    padding: 7px
+    &:before
+        content: ''
+        position: fixed
+        height: 50px
+        width: 100%
+        background-color: #19253E
+        left: 0
+        bottom: 0
+        z-index: -1
+.orderBet-info
+    display: inline-block
+    z-index: 10
+    width: 50%
+.orderBet-btnBox
+    display: inline-block
+    z-index: 10
+    text-align: right
+    width: 50%
+.orderBet-btn
+    display: inline-block
+    vertical-align: middle
+    margin-right: 5px
+    &:last-child
+        margin-right: 0
+.orderBet-btn.is-active
+    position: relative
+    &:before
+        content: ''
+        position: absolute
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $danger
+        right: 3px
+        top: 3px
+.orderBet-textBox
+    display: inline-block
+    vertical-align: middle
+    padding-right: 10px
+    letter-spacing: 1px
+.orderBet-text
+    color: $white
+    font-size: $font-size-s
+.orderBet-Num
+    color: $warning
+.trashIcon-btn   
+    +trans
+    width: 36px
+    height: 36px
+    border-radius: 3px
+    border: none
+    padding: 5px 5px
+    box-sizing: border-box
+    font-size: $font-size-m
+    display: inline-block
+    font-weight: lighter
+    cursor: pointer
+    background-color: $border
+    background-image: url(../img/icon-02.png)
+    background-position-y: 36px
+    background-position-x: -2px
+    &:hover
+        opacity: 0.5

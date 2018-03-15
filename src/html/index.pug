@@ -268,3 +268,27 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
             .orderList-btnBox
               buttom.orderList-btn.btn-defult.btn-spuare 機選
               buttom.orderList-btn.btn-success.btn-spuare 我要追號
+            .followBox
+              .tab-sBox
+                .tab-s.is-active 同倍追號
+                .tab-s  翻倍追號
+              .tab-s-container
+                p 追號計畫：起始倍數 <input class="inp-s" type="number" value="1"> ，追號期數
+                  select.sel-s
+                    option 10期
+                    option 20期
+                    option 30期
+                    option 40期
+                    option 50期
+                    option 60期
+                  buttom.btn.btn-s.btn-success 生成追號計畫
+        .orderBet
+          .orderBet-info
+            button.orderBet-btn.btn.btn-main.is-active 追號詳情
+            button.orderBet-btn.btn.btn-main.is-active 投注詳情
+          .orderBet-btnBox
+            .orderBet-textBox
+              .orderBet-text 總注數： <b class="orderBet-Num">0</b>
+              .orderBet-text 總下注金額： <b class="orderBet-Num">0</b>
+            button.orderBet-btn.trashIcon-btn
+            button.orderBet-btn.btn.btn-danger <span class="orderBet-icon"></span>投注

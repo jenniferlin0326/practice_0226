@@ -74,7 +74,7 @@ h1
 //btn
 .btn
     +trans
-    border-radius: 4px
+    border-radius: 3px
     text-align: center
     padding: 5px 20px
     box-sizing: border-box
@@ -83,8 +83,11 @@ h1
     display: inline-block
     font-weight: lighter
     cursor: pointer
+    line-height: 1.5
     &:hover
         opacity: 0.5
+    &:focus
+        outline: none
 .btn-spuare
     +trans
     border-radius: 4px
@@ -106,6 +109,7 @@ h1
     color: $white
 .btn-danger
     background-color: $danger
+    border: $danger 1px solid
     color: $white
 .btn-success
     background-color: $success
@@ -114,11 +118,16 @@ h1
     background-color: $gray-bg
     border: $border 1px solid
     color: $dark
+.btn-main
+    background-color: $main
+    border: $main 1px solid
+    color: $white
 .btn-s
     padding: 5px 20px
     box-sizing: border-box
     min-width: 140px
     font-size: $font-size-defult
+    height: 30px
 //input
 .inp-defult
     +trans
@@ -134,4 +143,47 @@ h1
         outline: none
         border: rgba($warning, 0.6) 1px solid
         background-color: rgba($warning, 0.1)
-
+.inp-defult
+    +trans
+    border-radius: 4px
+    padding: 5px 5px
+    border: $gray-bg 1px solid
+    color: $main
+    text-align: center
+    line-height: 1.5em
+    width: 140px
+    box-sizing: border-box
+    &:focus
+        outline: none
+        border: rgba($warning, 0.6) 1px solid
+        background-color: rgba($warning, 0.1)
+.inp-s
+    +trans
+    border-radius: 4px
+    padding: 5px 5px
+    border: $gray-bg 1px solid
+    color: $main
+    text-align: center
+    line-height: 1.3em
+    width: 70px
+    box-sizing: border-box
+    height: 30px
+    &:focus
+        outline: none
+        border: rgba($warning, 0.6) 1px solid
+        background-color: rgba($warning, 0.1)
+.sel-s
+    +trans
+    border-radius: 4px
+    padding: 5px 5px
+    border: $gray-bg 1px solid
+    color: $main
+    text-align: center
+    line-height: 1.3em
+    width: 70px
+    height: 30px
+    box-sizing: border-box
+    &:focus
+        outline: none
+        border: rgba($warning, 0.6) 1px solid
+        background-color: rgba($warning, 0.1)
