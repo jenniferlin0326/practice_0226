@@ -1,3 +1,4 @@
 import { now } from './utils'
 
-console.log('hello world', now())
+var d = new Date();
+document.getElementById("sysTime").innerHTML = d;
