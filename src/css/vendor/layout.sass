@@ -188,7 +188,7 @@
 //container
 .container
     padding-top: 28px
-    padding-left: 5%
+    // padding-left: 5%
     width: 1200px
     margin: 0 auto 50px
 //頁籤
@@ -546,10 +546,17 @@
         opacity: 0.5
 .orderList
     @extend .flex
+    +trans(.8s, ease)
     position: relative
     box-shadow: 0px 0px 6px rgba($black,0.3)
+    bottom: 0
+    height: 0
+    transform: scaleY(0)
+    transform-origin: 0 0 0
     &:before
-        
+.orderList.show
+    height: auto
+    transform: scaleY(1)
 .orderList-head
     @extend .flex
     width: 100%

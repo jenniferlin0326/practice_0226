@@ -7,7 +7,7 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
   body
     .header
         .header-topBar
-          #sysTime.topBar-time.topBar-text 2018/03/09 17:14:59
+          #sysTime.topBar-time.topBar-text 
           .topBar-menu
             a.topBar-text.lanBox.topBar-position 語言切換
               ul.lanList
@@ -234,8 +234,8 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
               span.orderTotal-title 投注數：
               b.orderTotal-amounts 0
               botton.btn.btn-warning.addCart <span class="addCart-icon"></span>添加至注單
-          .orderList-openBtn 注單
-          .orderList
+          #orderList_open.orderList-openBtn  注單
+          #orderList.orderList
             .orderList-head
               .orderList-title.contain 內容
               .orderList-title.bets 注數
