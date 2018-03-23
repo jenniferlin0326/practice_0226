@@ -7,9 +7,6 @@ function orderList_open() {
 }
 
 //clock
-// document.getElementById("body").onload = function() {
-//   startTime();
-// };
 document.body.onload = function startTime() {
   var today = new Date();
   var y = today.getFullYear();
@@ -18,16 +15,17 @@ document.body.onload = function startTime() {
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
-  h = checkTime(h);
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById("sysTime").innerHTML =
+  document.getElementById('sysTime').innerHTML =
     y + "/" + M + "/" + d + " " + h + ":" + m + ":" + s;
-  var t = setTimeout("startTime()", 500);
-};
+  var t = setTimeout(startTime, 500);
+}
+
 function checkTime(i) {
   if (i < 10) {
-    i = "0" + i;
-  }
+    i = "0" + i
+  }; // add zero in front of numbers < 10
   return i;
 }
+
