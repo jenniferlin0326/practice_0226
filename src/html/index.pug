@@ -4,7 +4,7 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title practice
-  body(onload="startTime()")
+  body
     .header
         .header-topBar
           #sysTime.topBar-time.topBar-text 
@@ -39,7 +39,7 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
         dl.sideBar-list
           dt.sideBar-title.sideBar-title-open 即時開獎
           dd.sideBar-detail 
-            a.sideBar-btn BB PK3 <span class="sideBar-time">00:02:20</span>
+            a.sideBar-btn BB PK3 <span class="sideBar-time" >00:02:20</span>
           dd.sideBar-detail
             a.sideBar-btn 江蘇快3 <span class="sideBar-time">00:02:20</span>
           dd.sideBar-detail
@@ -73,7 +73,7 @@ html(lang="zh-tw" data-git=htmlWebpackPlugin.options.git data-rev=htmlWebpackPlu
               .gameInfoBox
                 .gameInfo-name 重慶時時彩
                 .gameInfo-num No.20180309-068
-                .gameInfo-time 00:05:00
+                .gameInfo-time#countDown
             .gameInfo-result
               .gameInfo-num No.20180309-067
               .gameInfo-resultBox
